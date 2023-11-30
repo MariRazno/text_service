@@ -1,0 +1,16 @@
+{
+  "name": "helloworld_nodejs",
+  "version": "0.0.1",
+  "description": "minimal microservice implemented with nodejs",
+  "main": "helloworld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rafel Israels",
+  "license": "SEE LICENSE IN license.txt",
+  "dependencies" : {
+    "utf8" : "latest",
+    "@hapi/b64":"latest",
+    "xmlhttprequest" : "latest"
+  }
+}
