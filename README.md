@@ -1,10 +1,6 @@
 ---
-title: Icd10 Docker
-emoji: 👀
-colorFrom: purple
-colorTo: purple
+title: BERT NER model Docker
 sdk: docker
-pinned: false
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+Service that contains BERT NER model to be implemented.
