@@ -8,7 +8,7 @@ FROM momoware/service_core_nodejs:latest AS BUILD_PROXY
 # copy sourcefiles and install (npm) dependencies
 WORKDIR /eopti
 COPY ./services/text_service/ ./
-# RUN npm install
+RUN npm install
 
 # copy momo/eopti libraries, dont know (yet) how to include these in package.json
 COPY ./libraries/eopti/ms/ ./node_modules/eopti/ms/
