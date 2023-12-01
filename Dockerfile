@@ -8,7 +8,7 @@ FROM momoware/service_core_nodejs:latest AS BUILD_PROXY
 # copy sourcefiles and install (npm) dependencies
 WORKDIR /eopti
 COPY ./services/text_service/ ./
-RUN npm install
+# RUN npm install
 
 # copy momo/eopti libraries, dont know (yet) how to include these in package.json
 COPY ./libraries/eopti/ms/ ./node_modules/eopti/ms/
@@ -37,8 +37,8 @@ RUN pip install poetry==1.6.0
 RUN poetry config virtualenvs.create false && \
     poetry install --no-root --no-cache
 
-COPY ./services/text_service/embedder ./embedder
-COPY ./services/text_service/classifiers ./classifiers
+# COPY ./services/text_service/embedder ./embedder
+# COPY ./services/text_service/classifiers ./classifiers
 COPY ./services/text_service/required_classes.py ./required_classes.py
 # we dont need the app, its functionality shall be moved to server.py
 # COPY ./app.py ./app.py
