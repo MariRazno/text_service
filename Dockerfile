@@ -62,6 +62,7 @@ COPY --from=BUILD_PROXY /eopti/proxy.js ./
 WORKDIR /eopti
 COPY ./services/text_service/dockerStart.sh ./
 RUN find . ../code  -exec sha1sum '{}' \; | sort - &> ./file_hashes
+
 RUN cat ./file_hashes | sha1sum - > ./build_hash
 CMD ["./dockerStart.sh"]
 
